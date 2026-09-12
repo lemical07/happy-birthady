@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz cumpleaños</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+
+    <main class="home">
+
+        <!-- Pantalla inicial -->
+        <section class="home__intro">
+
+            <div class="home__intro-content">
+
+                <p class="home__intro-text">
+                    Hay algo que quiero mostrarte...
+                </p>
+
+                <button class="button button--primary home__intro-button">
+                    Continuar
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Noticiero -->
+        <section class="home__news">
+
+            <div class="home__news-content">
+
+                <!-- Coloca aquí el video del noticiero -->
+                <video class="home__news-video" controls>
+                    <source src="./video/noticiero.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+
+            </div>
+
+        </section>
+
+        <!-- Caja de la sorpresa -->
+        <section class="home__surprise">
+
+            <div class="home__surprise-content">
+
+                <p class="home__surprise-text">
+                    Veamos los detalles...
+                </p>
+
+                <button class="home__box" type="button">
+                    <span class="home__box-text">
+                        Abrir
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Revelación -->
+        <section class="home__reveal">
+
+            <div class="home__reveal-content">
+
+                <p class="home__reveal-text">
+                    Feliz cumpleaños
+                </p>
+
+                <h1 class="home__reveal-title">
+                    mamá
+                </h1>
+
+                <a href="./historia.html" class="button button--primary">
+                    Comenzar
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
