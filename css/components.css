@@ -1,0 +1,68 @@
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+}
+
+.home {
+    min-height: 100vh;
+}
+
+.home__hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Coloca aquí la ruta de la foto de fondo */
+    background: url('../img/mama.jpeg') center / cover no-repeat;
+}
+
+.home__overlay {
+    position: absolute;
+    inset: 0;
+    background: var(--color-overlay);
+}
+
+.home__content {
+    position: relative;
+    max-width: 700px;
+    padding: var(--space-medium);
+    text-align: center;
+}
+
+.home__eyebrow {
+    margin-bottom: var(--space-small);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home__title {
+    margin-bottom: var(--space-medium);
+    font-family: var(--font-title);
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.home__title span {
+    display: block;
+}
+
+.home__text {
+    margin-bottom: var(--space-large);
+    font-size: 30px;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.button--primary {
+    background: var(--color-button);
+    color: var(--color-button-text);
+}

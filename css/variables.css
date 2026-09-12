@@ -1,0 +1,13 @@
+:root {
+    --color-text: #ffffff;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --color-button: #ffffff;
+    --color-button-text: #333333;
+
+    --font-body: 'Inter', sans-serif;
+    --font-title: 'Playfair Display', serif;
+
+    --space-small: 16px;
+    --space-medium: 24px;
+    --space-large: 40px;
+}
