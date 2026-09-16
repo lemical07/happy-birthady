@@ -7,6 +7,7 @@ const box = document.querySelector('.home__box');
 const celebration = document.querySelector('.home__celebration');
 const celebrationVideoContainer = document.querySelector('.home__celebration-video');
 const celebrationVideo = document.querySelector('.home__celebration-media');
+const photos = document.querySelectorAll('.home__photo');
 
 const musica = new Audio('./audio/intro1.mp3');
 const introText = document.querySelector('.home__intro-text');
@@ -41,11 +42,12 @@ celebrationVideo.addEventListener('ended', () => {
     celebrationVideoContainer.classList.add('is-hidden');
 
     setTimeout(() => {
-        celebration.style.display = 'none';
-        reveal.style.display = 'flex';
+        celebrationVideoContainer.style.display = 'none';
 
-        requestAnimationFrame(() => {
-            reveal.classList.add('is-visible');
+        photos.forEach((photo, index) => {
+            setTimeout(() => {
+                photo.style.display = 'block';
+            }, index * 3000);
         });
     }, 1500);
 });
