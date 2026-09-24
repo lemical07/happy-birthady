@@ -403,3 +403,208 @@
         0 0 25px rgba(143, 79, 85, 0.6),
         0 0 55px rgba(215, 160, 154, 0.3);
 }
+
+/* RECUERDOS */
+
+.memories {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #000000;
+}
+
+.memories__background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.memories__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.48);
+}
+
+.memories__start,
+.memories__experience {
+    position: relative;
+    z-index: 2;
+    min-height: 100svh;
+}
+
+/* PANTALLA INICIAL */
+
+.memories__start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.memories__start-content {
+    width: 100%;
+    max-width: 380px;
+}
+
+.memories__eyebrow {
+    margin-bottom: 10px;
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.memories__title {
+    margin-bottom: 30px;
+    font-family: var(--font-title);
+    color: var(--color-text);
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.memories__start .button {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+/* EXPERIENCIA */
+
+.memories__experience {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 55px;
+}
+
+.memories__header {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.memories__header .memories__title {
+    margin-bottom: 0;
+}
+
+/* AREA DEL CARRUSEL */
+
+.memories__carousel {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: pan-y;
+}
+
+.memories__circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* RECUERDO */
+
+.memories__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(88vw, 420px);
+    height: min(70vh, 500px);
+    transform: translate(-50%, -50%);
+    user-select: none;
+    will-change: transform;
+}
+
+.memories__photo-main,
+.memories__photo-reflection {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid rgba(215, 160, 154, 0.75);
+    border-radius: 18px;
+}
+
+.memories__photo-main {
+    top: 0;
+    z-index: 3;
+    box-shadow:
+        0 0 20px rgba(215, 160, 154, 0.3),
+        0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.memories__photo-reflection {
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.25;
+    border-color: rgba(215, 160, 154, 0.2);
+    filter: blur(1px);
+}
+
+.memories__photo-reflection--top {
+    bottom: calc(100% + 8px);
+    transform: scaleY(-1);
+    transform-origin: bottom;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 75%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 75%);
+}
+
+.memories__photo-reflection--bottom {
+    top: calc(100% + 8px);
+    transform: scaleY(-1);
+    transform-origin: top;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 75%);
+}
+
+.memories__photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* INSTRUCCIÓN */
+
+.memories__instruction {
+    position: absolute;
+    bottom: 75px;
+    z-index: 5;
+    width: 100%;
+    padding: 0 24px;
+    color: var(--color-text-soft);
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.4s ease;
+}
+
+.memories__instruction.is-hidden {
+    opacity: 0;
+}
+
+/* CONTADOR */
+
+.memories__counter {
+    position: absolute;
+    right: 24px;
+    bottom: 30px;
+    z-index: 5;
+    color: var(--color-accent);
+    font-size: 14px;
+    font-weight: 600;
+}

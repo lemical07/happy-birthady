@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuerdos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+
+    <main class="memories">
+
+        <video class="memories__background" muted loop playsinline>
+            <source src="./video/recuerdos.mp4" type="video/mp4">
+        </video>
+
+        <div class="memories__overlay"></div>
+
+        <section class="memories__start" id="startScreen">
+            <div class="memories__start-content">
+                <p class="memories__eyebrow">Un momento para recordar</p>
+                <h1 class="memories__title">Nuestros recuerdos</h1>
+                <button class="button button--primary" id="startButton">
+                    Iniciar
+                </button>
+            </div>
+        </section>
+
+        <section class="memories__experience" id="memoriesExperience">
+
+            <header class="memories__header">
+                <p class="memories__eyebrow">Momentos que permanecen</p>
+                <h1 class="memories__title">Recuerdos</h1>
+            </header>
+
+            <div class="memories__carousel" id="memoriesCarousel">
+                <div class="memories__circle" id="memoriesCircle"></div>
+            </div>
+
+            <p class="memories__instruction" id="instruction">
+                Desliza para descubrir
+            </p>
+
+            <p class="memories__counter" id="counter">1 / 11</p>
+
+        </section>
+
+    </main>
+
+    <script src="./js/recuerdos.js"></script>
+</body>
+</html>
