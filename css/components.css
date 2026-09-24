@@ -624,3 +624,137 @@
     background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(5px);
 }
+
+/* POEMA */
+
+.poem {
+    position: relative;
+    width: 100%;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #000000;
+}
+
+.poem__background {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poem__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.poem__start,
+.poem__experience {
+    position: relative;
+    z-index: 2;
+    min-height: 100svh;
+}
+
+/* PANTALLA INICIAL */
+
+.poem__start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.poem__start-content {
+    width: 100%;
+    max-width: 380px;
+}
+
+.poem__eyebrow {
+    margin-bottom: 10px;
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.poem__title {
+    margin-bottom: 30px;
+    font-family: var(--font-title);
+    color: var(--color-text);
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.poem__start .button {
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 16px;
+}
+
+/* EXPERIENCIA */
+
+.poem__experience {
+    display: none;
+    padding: 70px 18px 40px;
+}
+
+.poem__home {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 5;
+    padding: 9px 16px;
+    border: 1px solid rgba(215, 160, 154, 0.45);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+}
+
+.poem__header {
+    width: 100%;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.poem__header .poem__title {
+    margin-bottom: 0;
+}
+
+/* TARJETAS */
+
+.poem__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.poem__card {
+    padding: 28px 22px;
+    border: 1px solid rgba(215, 160, 154, 0.3);
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.42);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(7px);
+}
+
+.poem__card p {
+    color: var(--color-text);
+    font-family: var(--font-title);
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+}
